@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function nomeContagem(nome) {
+        return function (contagem) {
+          return `Olá ${nome} você já contou ${contagem} numeros!`
+        }
+      }
+      const nomeContado = nomeContagem('ivo')
+      console.log(nomeContado('23'))
+
+      function nomeCont(name) {
+        let pontos = 0
+        return function funcao() {
+          pontos++
+          return `Olá ${name} vc contou ${pontos}!`
+        }
+      }
+      const contagemIvo = nomeCont('ivo')
+      const contagemRafa = nomeCont('Rafa')
+    </script>
+  </body>
+</html>
