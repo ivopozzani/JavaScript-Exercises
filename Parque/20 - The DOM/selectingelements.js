@@ -27,6 +27,16 @@ const pic = document.querySelector('.pic');
 console.log(pic);
 console.log(pic.classList);
 
-document.addEventListener('click', function () {
+pic.addEventListener('click', function () {
   pic.classList.toggle('rodar');
+  alert(`${pic.dataset.prev} ${pic.dataset.last}`);
+});
+
+const submit = document.querySelector('.submit');
+submit.addEventListener('click', function () {
+  const input = document.querySelector('input');
+  const newValue = input.value;
+  input.dataset.valor = newValue;
+  console.log(input);
+  console.log(input.dataset.valor);
 });
