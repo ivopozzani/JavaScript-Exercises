@@ -30,3 +30,21 @@ myLi2.insertAdjacentElement('beforebegin', myLi1);
 list.insertAdjacentElement('beforeend', myLi3);
 myLi3.appendChild(myLi4);
 myLi4.append(myLi5);
+
+const items = document.querySelector('.items');
+
+const txt = 'Variavel';
+const txt2 = 'Outra variavel';
+const mYHTML = `
+<div> 
+<h2> Olá nova tag vindo do JavaScript </h2>
+<p> Aqui só ${txt} ${txt2} </p>
+</div>
+`;
+
+items.innerHTML = mYHTML;
+
+// string into DOM element
+const myFragment = document.createRange().createContextualFragment(mYHTML);
+
+document.body.appendChild(myFragment);
