@@ -95,6 +95,15 @@ function deleteButton(event) {
 }
 
 delButton.forEach((Button) => Button.addEventListener('click', deleteButton));
+// delButton.forEach(function (button) {
+//   button.addEventListener('click', function (event) {
+//     const addOnClick = event.currentTarget;
+//     const newHTML = `<p>Hi I've Been Added!!</p>`;
+//     addOnClick.closest('.playerCard').insertAdjacentHTML('beforeend', newHTML);
+//   });
+
+// });
+
 // select all the buttons!
 // make out delete function
 // loop over them and attach a listener
